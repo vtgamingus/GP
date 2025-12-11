@@ -540,7 +540,9 @@
                     guestNameElement.textContent = guestName;
                 }
                 document.title = 'Welcome '+ guestName+ "";
-                //window.setTimeout(function () { document.setAttribute("title",  'Welcome '+ guestName+ ""); }, 200);
+                
+                if (timeout)
+                    window.clearTimeout(timeout);   
             } catch (error) {
                 console.error('Error loading details:', error);
                 document.getElementById('loadingOverlay').classList.remove('active');
@@ -567,7 +569,7 @@
             sessionStorage.clear();
             location.reload();
         }
-
+        let timeout = false;
         window.onload = function() {
             const token = sessionStorage.getItem('authToken');
             const guestName = sessionStorage.getItem('guestName');
@@ -577,9 +579,18 @@
                 document.getElementById('loadingOverlay').classList.add('active');
                 startFlowerAnimation();
                 
+                if (timeout)
+                    window.clearTimeout(timeout);
+                
                 setTimeout(() => {
                     loadDetailsPage(guestName);
                 }, 1500);
+            }
+            else {
+                const min = parseInt(Math.random() * 5) + 1;
+                timeout = window.setTimeout(() => {
+                    window.location.reload();
+                }, min * 1000 * 60);
             }
         };
 
