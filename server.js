@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -28,10 +29,6 @@ const VALID_CODES = {
     },
     '141097':{
         guestName: 'Terkar family',
-        role: ACCESS_LEVELS.VIP
-    },
-    '042693':{
-        guestName: 'Vedant Kawale',
         role: ACCESS_LEVELS.VIP
     },
     '150467':{
@@ -504,7 +501,13 @@ app.get('/api/details', (req, res) => {
                 background: linear-gradient(90deg, transparent, #ff6b35, transparent);
                 margin: 20px auto;
             }
-
+        .deity-container {
+            display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                    margin-top: 100px;
+        }
           .deity-corner {
                 position: absolute;
                 top: 0px;
@@ -553,7 +556,7 @@ app.get('/api/details', (req, res) => {
                 font-family: 'Playfair Display', serif;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1000px) {
                 .content-grid {
                     grid-template-columns: 1fr;
                 }
@@ -564,7 +567,7 @@ app.get('/api/details', (req, res) => {
                     transform: translateY(-5px);
                 }
                 .deity-corner {
-                    top: 80px;
+                    top: 0px;
                     padding: 10px;
                     img {
                         width: 40px;
@@ -585,11 +588,14 @@ app.get('/api/details', (req, res) => {
                     font-size: 0.65em;
                 }
             }
+                .content-wrapper{
+                    margin-top:0px;
+                }
         </style>
 
         <button class="logout-btn" onclick="logout()">← Logout</button>
 
-
+        <div class='deity-container'>
          <!-- Deity Images -->
             <div class="deity-corner deity-left">
                 <img src="https://png.pngtree.com/png-vector/20250121/ourmid/pngtree-ganesha-the-embodiment-of-prosperity-and-joy-png-image_15287837.png" 
@@ -607,11 +613,11 @@ app.get('/api/details', (req, res) => {
                 <p class="deity-label">॥ श्री लक्ष्मी नरसिंह प्रसन्न ॥ </p>
                 <!-- <p class="deity-label">Lord Narsimha</p> -->
             </div>
-
-
+        </div>
+        <div class="content-wrapper">
         <div class="header">
             <h1>🪔 गृह प्रवेश समारोह 🪔</h1>
-            <p class="sanskrit">Griha Pravesh Ceremony / House warming ceremony</p>
+            <p class="sanskrit">Gruha Pravesh Ceremony / House warming ceremony</p>
             <div class="decorative-line"></div>
             <p class="welcome">Namaste, <span id="guestName">Guest</span>!</p>
             <p class="date-time">Join us in celebrating this auspicious occasion</p>
@@ -693,6 +699,7 @@ app.get('/api/details', (req, res) => {
                     <span style="font-size: 0.9em; color: #666;">May all be happy and prosperous</span>
                 </p>
             </div>
+        </div>
         </div>
     `;
 
