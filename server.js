@@ -72,7 +72,7 @@ const VALID_CODES = {
         role: ACCESS_LEVELS.FRIEND
     },
     '090796': {
-        guestName: 'Simran and Satnam',
+        guestName: 'Harsimrun and Satnam',
         role: ACCESS_LEVELS.FRIEND
     },
     'PSDVIN': {
