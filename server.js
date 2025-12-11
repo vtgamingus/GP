@@ -47,6 +47,10 @@ const VALID_CODES = {
         guestName: 'Mohini and Ajinkya',
         role: ACCESS_LEVELS.VIP
     },
+    '042693': {
+        guestName: 'Vedant Kawale',
+        role: ACCESS_LEVELS.VIP
+    },
     '061193': {
         guestName: 'Estmeed Guest',
         role: ACCESS_LEVELS.VIP
