@@ -79,6 +79,10 @@ const VALID_CODES = {
         guestName: 'Harsimrun and Satnam',
         role: ACCESS_LEVELS.FRIEND
     },
+    '100792': {
+        guestName: 'Asave family',
+        role: ACCESS_LEVELS.FRIEND
+    },
     'PSDVIN': {
         guestName: 'Vinay Polisetty',
         role: ACCESS_LEVELS.FRIEND
