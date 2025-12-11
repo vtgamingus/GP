@@ -447,7 +447,7 @@
             successMsg.style.display = 'none';
 
             try {
-                const response = await fetch('http://localhost:3000/api/verify', {
+                const response = await fetch('/api/verify', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -507,7 +507,7 @@
                 }
 
                 // Fetch details from server with token
-                const response = await fetch('http://localhost:3000/api/details', {
+                const response = await fetch('/api/details', {
                     headers: {
                         'Authorization': token
                     }
@@ -553,7 +553,7 @@
             
             if (token) {
                 try {
-                    await fetch('http://localhost:3000/api/logout', {
+                    await fetch('/api/logout', {
                         method: 'POST',
                         headers: {
                             'Authorization': token
