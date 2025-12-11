@@ -52,7 +52,7 @@ const VALID_CODES = {
         role: ACCESS_LEVELS.VIP
     },
     '061193': {
-        guestName: 'Estmeed Guest',
+        guestName: 'Esteemed Guest',
         role: ACCESS_LEVELS.VIP
     },
     '122092': {
